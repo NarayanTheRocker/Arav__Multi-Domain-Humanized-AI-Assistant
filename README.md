@@ -1,55 +1,54 @@
-# Naru AI 🤖✨ - A Voice-Activated Conversational Assistant
+# Arav AI 🤖✨  
+Multi-Domain-Humanized-AI-Assistant
 
-Naru is a highly responsive, voice-activated AI assistant with a unique Hinglish personality. Built with Python, Groq, and state-of-the-art speech technologies, Naru is designed to be a helpful, context-aware, and engaging companion.
-
-
+Arav is a highly responsive, voice-activated AI assistant with a unique Hinglish personality. Built with Python, Groq, and state-of-the-art speech technologies, Arav is designed to be a helpful, context-aware, and engaging companion.
 
 ---
 
 ## 🚀 Features
 
-* **Voice-Activated:** Hands-free operation using wake words ("Hey Naru").
-* **High-Speed Responses:** Powered by the **Groq LPU™ Inference Engine** with the Llama 3.1 model for near-instantaneous replies.
-* **Unique Personality:** A custom "Hinglish" persona that makes interactions feel natural and fun, not robotic.
-* **Context-Aware:** Knows the current time, date, and your location to provide relevant answers.
-* **Real-time Weather:** Integrated with Open-Meteo for live weather forecasts.
-* **Noise Reduction:** Cleans up microphone input for better speech recognition in noisy environments.
-* **Switchable Voices:** Choose between a male or female voice on the fly.
-* **Conversation Memory:** Remembers the recent parts of your conversation for follow-up questions.
-* **Extensible & Versatile:** Capable of handling a wide range of tasks:
-    * Movie Recommendations
-    * Finding Places
-    * Human Emotion Improvement (empathetic conversation)
-    * Weather Forecasts
-    * Fashion Sensing and Advice
-    * General Talk & Knowledge Q&A
+- **Voice-Activated:** Hands-free operation using wake words ("Hey Arav").
+- **High-Speed Responses:** Powered by the **Groq LPU™ Inference Engine** with the Llama 3.1 model for near-instantaneous replies.
+- **Unique Personality:** A custom "Hinglish" persona that makes interactions feel natural and fun.
+- **Context-Aware:** Knows the current time, date, and your location for relevant answers.
+- **Real-time Weather:** Integrated with Open-Meteo for live weather updates.
+- **Noise Reduction:** Cleans microphone input for better recognition in noisy environments.
+- **Switchable Voices:** Choose between male or female voice output.
+- **Conversation Memory:** Remembers recent dialogue for follow-up questions.
+- **Extensible Skills:**  
+  - Movie Recommendations  
+  - Finding Places  
+  - Emotional Support Conversations  
+  - Weather Forecasting  
+  - Fashion Tips  
+  - General Talk and Q&A  
 
 ---
 
 ## 🛠️ How It Works
 
-Naru operates on a simple yet effective loop: **Listen -> Process -> Think -> Respond**.
+Arav operates on a simple yet effective loop: **Listen → Process → Think → Respond**
 
-1.  **Wake Word Detection:** Listens passively for a wake word (e.g., "Hey Naru").
-2.  **Command Recording:** Upon activation, it records the user's command.
-3.  **Audio Processing:** The recorded audio is cleaned using a noise reduction algorithm.
-4.  **Speech-to-Text (STT):** The clean audio is transcribed into text using Google's STT engine.
-5.  **Context Assembly:** The system gathers the user's query, conversation history, time, and real-time weather data.
-6.  **LLM Inference:** The context-rich prompt is sent to the Groq API to generate a smart, in-character response.
-7.  **Text-to-Speech (TTS):** The response text is converted into high-quality, natural-sounding audio using Microsoft Edge's neural voices.
-8.  **Audio Playback:** The final audio is played back to the user.
+1. **Wake Word Detection:** Listens passively for "Hey Arav".
+2. **Command Recording:** Starts recording after activation.
+3. **Audio Processing:** Cleans audio via noise reduction algorithms.
+4. **Speech-to-Text (STT):** Converts speech to text using Google STT.
+5. **Context Assembly:** Combines the user's query, history, time, and weather.
+6. **LLM Inference:** Sends the context to Groq for an intelligent, Hinglish-style response.
+7. **Text-to-Speech (TTS):** Converts the response into natural-sounding audio.
+8. **Audio Playback:** Plays the response instantly.
 
 ---
 
 ## 🔧 Tech Stack
 
-* **LLM Engine:** [Groq](https://groq.com/) (Llama 3.1 8B Instant)
-* **Speech-to-Text:** `speech_recognition` (Google STT)
-* **Text-to-Speech:** `edge-tts`
-* **Audio Processing:** `pyaudio`, `pydub`, `sounddevice`, `noisereduce`
-* **APIs:** Open-Meteo (Weather), TMDB (Movies)
-* **Core Language:** Python 3.9+
-* **Concurrency:** `asyncio`
+- **LLM Engine:** Groq (Llama 3.1 8B Instant)
+- **STT:** `speech_recognition` (Google STT)
+- **TTS:** `edge-tts`
+- **Audio Processing:** `pyaudio`, `pydub`, `sounddevice`, `noisereduce`
+- **APIs:** Open-Meteo, TMDB
+- **Language:** Python 3.9+
+- **Async Framework:** `asyncio`
 
 ---
 
@@ -57,52 +56,52 @@ Naru operates on a simple yet effective loop: **Listen -> Process -> Think -> Re
 
 ### Prerequisites
 
-* Python 3.9+
-* API Keys for:
-    * [GroqCloud](https://console.groq.com/keys)
-    * [TheMovieDB (TMDB)](https://www.themoviedb.org/settings/api) (Optional but recommended)
-* System dependencies for PyAudio.
-    * **On Debian/Ubuntu/Raspberry Pi OS:**
-        ```bash
-        sudo apt-get update && sudo apt-get install portaudio19-dev
-        ```
-    * **On macOS:**
-        ```bash
-        brew install portaudio
-        ```
+- Python 3.9+
+- API Keys:
+  - GroqCloud
+  - TMDB (optional but recommended)
+- System dependencies for PyAudio:
+  - **Debian/Ubuntu/Raspberry Pi OS**
+    ```bash
+    sudo apt-get update && sudo apt-get install portaudio19-dev
+    ```
+  - **macOS**
+    ```bash
+    brew install portaudio
+    ```
+
+---
 
 ### Installation Steps
 
-1.  **Clone the repository:**
+1. **Clone the repository**
     ```bash
-    git clone [https://github.com/your-username/naru-ai.git](https://github.com/your-username/naru-ai.git)
-    cd naru-ai
+    git clone https://github.com/your-username/arav-ai.git
+    cd arav-ai
     ```
 
-2.  **Create and activate a virtual environment:**
+2. **Create & activate a virtual environment**
     ```bash
     python3 -m venv venv
     source venv/bin/activate
     ```
 
-3.  **Install the required packages:**
+3. **Install dependencies**
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Set up your environment variables:**
-    * Create a file named `.env` in the root directory.
-    * Add your API keys to this file.
+4. **Set environment variables**  
+   Create a `.env` file in the root directory:
 
-    **`.env` file:**
     ```env
     GROQ_API_KEY="gsk_YourGroqApiKeyHere"
     TMDB_API_KEY="YourTmdbApiKeyHere"
     ```
 
-### requirements.txt
+---
 
-Your `requirements.txt` file should contain:
+## 📦 requirements.txt
 
 ```txt
 groq
